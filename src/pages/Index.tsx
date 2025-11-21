@@ -3,7 +3,6 @@ import { Scale, Shield, FileText, Users, Award, Phone, Mail, MapPin, Clock } fro
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import lawyerPhoto from "@/assets/lawyer-photo.jpg";
-import BusinessCard from "@/components/BusinessCard";
 
 const Index = () => {
   const fadeInUp = {
@@ -300,23 +299,6 @@ const Index = () => {
               </motion.div>
             ))}
           </motion.div>
-        </div>
-      </section>
-
-      {/* Business Card Section */}
-      <section className="py-24 bg-muted">
-        <div className="container mx-auto px-4">
-          <motion.div {...fadeInUp} className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black text-primary mb-4">
-              الكرت الشخصي
-            </h2>
-            <div className="w-24 h-1 bg-gradient-gold mx-auto mb-6" />
-            <p className="text-xl text-muted-foreground">بطاقة العمل الاحترافية</p>
-          </motion.div>
-          
-          <div className="business-card-container">
-            <BusinessCard />
-          </div>
         </div>
       </section>
 
