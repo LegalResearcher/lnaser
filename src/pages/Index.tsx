@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Scale, Shield, FileText, Users, Award, Phone, Mail, MapPin, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import lawyerPhoto from "@/assets/lawyer-photo.jpg";
 
 const Index = () => {
   const fadeInUp = {
@@ -210,6 +211,67 @@ const Index = () => {
         </div>
       </section>
 
+      {/* About Lawyer Section */}
+      <section className="py-24 bg-background">
+        <div className="container mx-auto px-4">
+          <motion.div {...fadeInUp} className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-black text-primary mb-4">
+              عن المحامي
+            </h2>
+            <div className="w-24 h-1 bg-gradient-gold mx-auto" />
+          </motion.div>
+          
+          <motion.div
+            {...fadeInUp}
+            className="max-w-4xl mx-auto"
+          >
+            <Card className="p-8 md:p-12 shadow-elegant bg-white border-none">
+              <div className="flex flex-col md:flex-row gap-8 items-center">
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6 }}
+                  className="flex-shrink-0"
+                >
+                  <div className="w-64 h-64 rounded-2xl overflow-hidden shadow-card border-4 border-accent-gold">
+                    <img 
+                      src={lawyerPhoto} 
+                      alt="أ. معين الناصر" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </motion.div>
+                
+                <div className="flex-1 text-center md:text-right">
+                  <h3 className="text-3xl md:text-4xl font-black text-primary mb-3">
+                    أ. معين الناصر
+                  </h3>
+                  <p className="text-xl text-rich-blue font-bold mb-6">
+                    محامٍ ومستشار قانوني
+                  </p>
+                  <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                    محامٍ متخصص في القضايا المدنية والجنائية والتجارية، مع خبرة واسعة في تقديم الاستشارات القانونية وتمثيل العملاء أمام المحاكم اليمنية. نلتزم بتقديم خدمات قانونية احترافية تتسم بالجودة والمصداقية.
+                  </p>
+                  <div className="flex flex-col gap-3 mt-8">
+                    <div className="flex items-center justify-center md:justify-start gap-3 text-muted-foreground">
+                      <MapPin className="w-5 h-5 text-rich-blue" />
+                      <span className="font-bold">اليمن - صنعاء</span>
+                    </div>
+                    <div className="flex items-center justify-center md:justify-start gap-3 text-muted-foreground">
+                      <Phone className="w-5 h-5 text-rich-blue" />
+                      <a href="tel:+967772762090" className="font-bold hover:text-rich-blue transition-smooth">
+                        772762090
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Card>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Why Choose Us */}
       <section className="py-24 bg-gradient-accent">
         <div className="container mx-auto px-4">
@@ -259,16 +321,25 @@ const Index = () => {
             className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto"
           >
             {[
-              { icon: Phone, title: "الهاتف", value: "+966 XX XXX XXXX" },
-              { icon: Mail, title: "البريد الإلكتروني", value: "info@alnasser-law.com" },
-              { icon: MapPin, title: "العنوان", value: "المملكة العربية السعودية" },
-              { icon: Clock, title: "ساعات العمل", value: "الأحد - الخميس، 9 صباحاً - 5 مساءً" }
+              { icon: Phone, title: "الهاتف", value: "772762090", link: "tel:+967772762090" },
+              { icon: Mail, title: "البريد الإلكتروني", value: "info@alnasser-law.com", link: "mailto:info@alnasser-law.com" },
+              { icon: MapPin, title: "العنوان", value: "اليمن - صنعاء" },
+              { icon: Clock, title: "ساعات العمل", value: "السبت - الخميس، 9 صباحاً - 5 مساءً" }
             ].map((contact, index) => (
               <motion.div key={index} variants={fadeInUp}>
                 <Card className="p-6 text-center shadow-card hover:shadow-card-hover transition-elegant hover:-translate-y-2 bg-white border-none">
                   <contact.icon className="w-12 h-12 text-rich-blue mx-auto mb-4" />
                   <h3 className="font-bold text-primary mb-2">{contact.title}</h3>
-                  <p className="text-muted-foreground text-sm">{contact.value}</p>
+                  {contact.link ? (
+                    <a 
+                      href={contact.link}
+                      className="text-muted-foreground text-sm hover:text-rich-blue transition-smooth"
+                    >
+                      {contact.value}
+                    </a>
+                  ) : (
+                    <p className="text-muted-foreground text-sm">{contact.value}</p>
+                  )}
                 </Card>
               </motion.div>
             ))}
