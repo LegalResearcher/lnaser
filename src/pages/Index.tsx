@@ -3,7 +3,7 @@ import { Scale, Shield, FileText, Users, Award, Phone, Mail, MapPin, Clock } fro
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import lawyerPhoto from "@/assets/lawyer-photo.jpg";
-import BusinessCard from "@/components/BusinessCard";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   const fadeInUp = {
@@ -314,9 +314,19 @@ const Index = () => {
             <p className="text-xl text-muted-foreground">بطاقة العمل الاحترافية</p>
           </motion.div>
           
-          <div className="business-card-container">
-            <BusinessCard />
-          </div>
+          <motion.div
+            {...fadeInUp}
+            className="flex justify-center"
+          >
+            <Link to="/business-card">
+              <Button
+                size="lg"
+                className="bg-gradient-accent text-white font-bold text-lg px-12 py-6 shadow-elegant hover:shadow-card-hover transition-elegant"
+              >
+                عرض وطباعة الكرت الشخصي
+              </Button>
+            </Link>
+          </motion.div>
         </div>
       </section>
 
