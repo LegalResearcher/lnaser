@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Scale, Shield, FileText, Users, Award, Phone, Mail, MapPin, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { PWAInstallPrompt } from "@/components/PWAInstallPrompt";
 import lawyerPhoto from "@/assets/lawyer-photo.jpg";
 import logo from "@/assets/logo.png";
 
@@ -65,6 +66,8 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <PWAInstallPrompt />
+      
       {/* Navigation */}
       <motion.nav
         initial={{ y: -100 }}
@@ -90,6 +93,7 @@ const Index = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
+              className="flex gap-3"
             >
               <Button variant="outline" className="bg-transparent border-accent-gold text-accent-gold hover:bg-accent-gold hover:text-navy transition-smooth">
                 تواصل معنا
