@@ -3,6 +3,7 @@ import { Scale, Shield, FileText, Users, Award, Phone, Mail, MapPin, Clock } fro
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import lawyerPhoto from "@/assets/lawyer-photo.jpg";
+import logo from "@/assets/logo.png";
 
 const Index = () => {
   const fadeInUp = {
@@ -77,9 +78,9 @@ const Index = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
-              className="flex items-center gap-2"
+              className="flex items-center gap-3"
             >
-              <Scale className="w-8 h-8 text-accent-gold" />
+              <img src={logo} alt="مكتب الناصر للمحاماة" className="w-12 h-12 object-contain" />
               <div>
                 <h1 className="text-white font-bold text-xl">مكتب الناصر للمحاماة</h1>
                 <p className="text-accent-gold text-sm">أ. معين الناصر</p>
