@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Scale, Shield, FileText, Users, Award, Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Scale, Shield, FileText, Users, Award, Phone, Mail, MapPin, Clock, Target, Eye, Heart, CheckCircle, Briefcase, TrendingUp, Star, MessageSquare, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { PWAInstallPrompt } from "@/components/PWAInstallPrompt";
@@ -25,44 +25,81 @@ const Index = () => {
 
   const services = [
     {
-      icon: Scale,
-      title: "القضايا المدنية والتجارية",
-      description: "تمثيل شامل في جميع أنواع القضايا المدنية والتجارية مع خبرة واسعة في تحقيق أفضل النتائج"
-    },
-    {
-      icon: Shield,
-      title: "القضايا الجنائية",
-      description: "دفاع قوي ومحترف في القضايا الجنائية بكافة أنواعها مع حماية كاملة لحقوقك القانونية"
+      icon: Briefcase,
+      title: "قانون الشركات والأعمال",
+      items: ["تأسيس الشركات", "إعداد عقود الشراكات", "المتابعة القانونية للشركات", "حل النزاعات التجارية"]
     },
     {
       icon: FileText,
-      title: "الاستشارات القانونية",
-      description: "استشارات قانونية متخصصة ودقيقة تساعدك على اتخاذ القرارات الصحيحة"
+      title: "العقود والاتفاقيات",
+      items: ["صياغة العقود التجارية", "مراجعة العقود وحمايتها قانونياً", "عقود العمل", "عقود الاستثمار والتطوير"]
     },
     {
-      icon: Users,
-      title: "قضايا الأحوال الشخصية",
-      description: "خبرة عميقة في قضايا الأسرة والأحوال الشخصية بتعامل راقٍ ومهني"
-    }
-  ];
-
-  const features = [
-    {
-      icon: Award,
-      title: "خبرة واسعة",
-      description: "سنوات من الخبرة في مجال المحاماة والقانون"
+      icon: Scale,
+      title: "القانون المدني",
+      items: ["التعويضات", "الدعاوى المدنية", "النزاعات العقارية", "حماية الحقوق المدنية"]
     },
     {
       icon: Shield,
-      title: "مصداقية عالية",
-      description: "نلتزم بأعلى معايير الشفافية والمصداقية"
+      title: "القانون الجنائي",
+      items: ["الترافع في القضايا الجنائية", "الدفاع والتحقيق", "تقديم الاستشارات للمتهمين والمجني عليهم"]
     },
     {
       icon: Users,
-      title: "فريق محترف",
-      description: "فريق من المحامين المتخصصين في كافة المجالات"
+      title: "التحكيم وتسوية المنازعات",
+      items: ["إدارة جلسات التحكيم", "إعداد مذكرات التحكيم", "الحلول الودية الفعّالة"]
+    },
+    {
+      icon: Award,
+      title: "التوثيق والتحقيقات القانونية",
+      items: ["توثيق العقود", "إعداد الإقرارات", "جمع الأدلة", "تحليل المستندات"]
     }
   ];
+
+  const values = [
+    { icon: Shield, title: "النزاهة", description: "أساس عملنا وجوهر تعاملنا" },
+    { icon: Heart, title: "السرية", description: "حماية كاملة لبيانات عملائنا وأسرار قضاياهم" },
+    { icon: Award, title: "الاحترافية", description: "خدمات وفق أعلى معايير الجودة" },
+    { icon: CheckCircle, title: "الالتزام", description: "المتابعة الدقيقة والتنفيذ المتقن" },
+    { icon: Eye, title: "الشفافية", description: "وضوح في الإجراءات والتكاليف" }
+  ];
+
+  const achievements = [
+    { number: "10+", label: "سنوات من الخبرة" },
+    { number: "300+", label: "عقد واتفاقية" },
+    { number: "100+", label: "قضية ناجحة" },
+    { number: "50+", label: "عميل راضٍ" }
+  ];
+
+  const howWeWork = [
+    { 
+      step: "1", 
+      title: "استشارة قانونية شخصية", 
+      description: "نستمع إليك بعناية، نفهم تفاصيل قضيتك، ونقدم تحليلاً قانونياً واضحاً" 
+    },
+    { 
+      step: "2", 
+      title: "إعداد استراتيجية قانونية", 
+      description: "نعد خطة قانونية مكتملة تعتمد على تحليل شامل وتوقعات دقيقة" 
+    },
+    { 
+      step: "3", 
+      title: "التنفيذ والمتابعة", 
+      description: "نتخذ جميع الإجراءات اللازمة ونتابع سير القضية بشكل مستمر" 
+    }
+  ];
+
+  const testimonials = [
+    {
+      quote: "خدمة احترافية تتسم بالدقة والوضوح… أنصح بهم بشدة.",
+      author: "عميل شركة تجارية"
+    },
+    {
+      quote: "كان لهم الفضل في حل نزاع قانوني معقد بطريقة سريعة وآمنة.",
+      author: "مستثمر"
+    }
+  ];
+
 
   return (
     <div className="min-h-screen bg-background">
@@ -147,9 +184,18 @@ const Index = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="text-xl md:text-2xl text-white/90 mb-12 leading-relaxed"
+              className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed font-bold"
             >
-              نقدم خدمات قانونية احترافية متكاملة بأعلى معايير الجودة والمصداقية
+              حلول قانونية بمعايير عالمية… مبنية على الخبرة، النزاهة، والدقة
+            </motion.p>
+
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.7 }}
+              className="text-lg md:text-xl text-white/80 mb-12 leading-relaxed max-w-4xl mx-auto"
+            >
+              نؤمن بأن العدالة تبدأ بفهمٍ عميق لاحتياجات العميل، وتقديم حلول قانونية مبتكرة تعتمد على الاحترافية والدقة والخبرة المتخصصة
             </motion.p>
             
             <motion.div
@@ -183,16 +229,64 @@ const Index = () => {
         </motion.div>
       </section>
 
-      {/* Services Section */}
+      {/* Value Proposition Section */}
+      <section className="py-24 bg-gradient-accent">
+        <div className="container mx-auto px-4">
+          <motion.div {...fadeInUp} className="max-w-4xl mx-auto text-center">
+            <Target className="w-20 h-20 text-accent-gold mx-auto mb-6" />
+            <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
+              عرض القيمة الفريدة
+            </h2>
+            <p className="text-xl md:text-2xl text-white/95 leading-relaxed">
+              نحن لا نكتفي بتقديم الاستشارات… بل نقدّم <span className="font-bold text-accent-gold">حلولًا قانونية حقيقية</span> تُبنى على فهم شامل للقضية، واستراتيجيات مدروسة، وتنفيذ فعّال يضمن تحقيق أفضل النتائج
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Vision & Mission Section */}
       <section className="py-24 bg-muted">
+        <div className="container mx-auto px-4">
+          <motion.div
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true }}
+            className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto"
+          >
+            <motion.div variants={fadeInUp}>
+              <Card className="p-8 md:p-12 h-full shadow-card hover:shadow-card-hover transition-elegant bg-white border-none">
+                <Eye className="w-16 h-16 text-rich-blue mb-6" />
+                <h3 className="text-3xl font-black text-primary mb-6">رؤيتنا</h3>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  أن نكون واحدًا من أبرز وأقوى المكاتب القانونية في اليمن والمنطقة، من خلال تقديم خدمات قانونية بمعايير عالمية تُسهم في حماية الحقوق وتحقيق العدالة.
+                </p>
+              </Card>
+            </motion.div>
+
+            <motion.div variants={fadeInUp}>
+              <Card className="p-8 md:p-12 h-full shadow-card hover:shadow-card-hover transition-elegant bg-white border-none">
+                <Target className="w-16 h-16 text-rich-blue mb-6" />
+                <h3 className="text-3xl font-black text-primary mb-6">رسالتنا</h3>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  تقديم خدمات قانونية عالية الجودة تعتمد على النزاهة، الشفافية، الكفاءة، والخبرة، مع التركيز على بناء علاقة مستمرة وثقة طويلة الأمد مع عملائنا.
+                </p>
+              </Card>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Values Section */}
+      <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
           <motion.div {...fadeInUp} className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-black text-primary mb-4">
-              خدماتنا القانونية
+              قيمنا
             </h2>
             <div className="w-24 h-1 bg-gradient-gold mx-auto mb-6" />
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              نقدم مجموعة شاملة من الخدمات القانونية المتخصصة لخدمة عملائنا
+              المبادئ التي نلتزم بها في كل ما نقوم به
             </p>
           </motion.div>
           
@@ -201,17 +295,140 @@ const Index = () => {
             initial="initial"
             whileInView="whileInView"
             viewport={{ once: true }}
-            className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
+            className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 max-w-6xl mx-auto"
+          >
+            {values.map((value, index) => (
+              <motion.div key={index} variants={fadeInUp}>
+                <Card className="p-6 text-center h-full shadow-card hover:shadow-card-hover transition-elegant hover:-translate-y-2 bg-white border-none">
+                  <value.icon className="w-12 h-12 text-rich-blue mx-auto mb-4" />
+                  <h3 className="text-xl font-bold text-primary mb-3">{value.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{value.description}</p>
+                </Card>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Achievements Section */}
+      <section className="py-24 bg-gradient-hero">
+        <div className="container mx-auto px-4">
+          <motion.div {...fadeInUp} className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
+              إنجازاتنا
+            </h2>
+            <div className="w-24 h-1 bg-accent-gold mx-auto" />
+          </motion.div>
+          
+          <motion.div
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true }}
+            className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto"
+          >
+            {achievements.map((achievement, index) => (
+              <motion.div key={index} variants={fadeInUp} className="text-center">
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 transition-elegant hover:bg-white/20">
+                  <TrendingUp className="w-12 h-12 text-accent-gold mx-auto mb-4" />
+                  <h3 className="text-4xl md:text-5xl font-black text-accent-gold mb-2">{achievement.number}</h3>
+                  <p className="text-white/90 font-bold">{achievement.label}</p>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-24 bg-muted">
+        <div className="container mx-auto px-4">
+          <motion.div {...fadeInUp} className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-black text-primary mb-4">
+              مجالات التخصص
+            </h2>
+            <div className="w-24 h-1 bg-gradient-gold mx-auto mb-6" />
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              نقدم خدمات احترافية تغطي أهم المجالات القانونية
+            </p>
+          </motion.div>
+          
+          <motion.div
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true }}
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {services.map((service, index) => (
               <motion.div key={index} variants={fadeInUp}>
                 <Card className="p-8 h-full shadow-card hover:shadow-card-hover transition-elegant hover:-translate-y-2 bg-white border-none">
                   <service.icon className="w-16 h-16 text-rich-blue mb-6" />
-                  <h3 className="text-xl font-bold text-primary mb-4">{service.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+                  <h3 className="text-xl font-bold text-primary mb-6">{service.title}</h3>
+                  <ul className="space-y-3">
+                    {service.items.map((item, idx) => (
+                      <li key={idx} className="flex items-start gap-2 text-muted-foreground">
+                        <CheckCircle className="w-5 h-5 text-rich-blue flex-shrink-0 mt-0.5" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </Card>
               </motion.div>
             ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* How We Work Section */}
+      <section className="py-24 bg-background">
+        <div className="container mx-auto px-4">
+          <motion.div {...fadeInUp} className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-black text-primary mb-4">
+              كيف نعمل
+            </h2>
+            <div className="w-24 h-1 bg-gradient-gold mx-auto mb-6" />
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              نتبع منهجية احترافية لضمان تحقيق أفضل النتائج
+            </p>
+          </motion.div>
+          
+          <motion.div
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true }}
+            className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto"
+          >
+            {howWeWork.map((step, index) => (
+              <motion.div key={index} variants={fadeInUp}>
+                <Card className="p-8 h-full shadow-card hover:shadow-card-hover transition-elegant hover:-translate-y-2 bg-white border-none relative overflow-hidden">
+                  <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-gold opacity-10 rounded-bl-full" />
+                  <div className="relative">
+                    <div className="w-16 h-16 rounded-full bg-gradient-accent flex items-center justify-center mb-6">
+                      <span className="text-3xl font-black text-accent-gold">{step.step}</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-primary mb-4">{step.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{step.description}</p>
+                  </div>
+                </Card>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section className="py-24 bg-gradient-accent">
+        <div className="container mx-auto px-4">
+          <motion.div {...fadeInUp} className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
+              فريقنا
+            </h2>
+            <div className="w-24 h-1 bg-accent-gold mx-auto mb-6" />
+            <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
+              يضم مكتب الناصر نخبة من المحامين والمستشارين القانونيين المتخصصين في مختلف فروع القانون، بخبرة تتراوح بين <span className="font-bold text-accent-gold">10 إلى 20 عامًا</span>، ويتمتع كل منهم بخبرة عميقة في مجاله
+            </p>
           </motion.div>
         </div>
       </section>
@@ -277,14 +494,17 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section className="py-24 bg-gradient-accent">
+      {/* Testimonials Section */}
+      <section className="py-24 bg-muted">
         <div className="container mx-auto px-4">
           <motion.div {...fadeInUp} className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
-              لماذا تختار مكتب الناصر؟
+            <h2 className="text-4xl md:text-5xl font-black text-primary mb-4">
+              شهادات العملاء
             </h2>
-            <div className="w-24 h-1 bg-accent-gold mx-auto" />
+            <div className="w-24 h-1 bg-gradient-gold mx-auto mb-6" />
+            <p className="text-xl text-muted-foreground">
+              آراء عملائنا تعكس التزامنا بالجودة والاحترافية
+            </p>
           </motion.div>
           
           <motion.div
@@ -292,17 +512,44 @@ const Index = () => {
             initial="initial"
             whileInView="whileInView"
             viewport={{ once: true }}
-            className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto"
+            className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto"
           >
-            {features.map((feature, index) => (
-              <motion.div key={index} variants={fadeInUp} className="text-center">
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 transition-elegant hover:bg-white/20">
-                  <feature.icon className="w-16 h-16 text-accent-gold mx-auto mb-6" />
-                  <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-white/90 leading-relaxed">{feature.description}</p>
-                </div>
+            {testimonials.map((testimonial, index) => (
+              <motion.div key={index} variants={fadeInUp}>
+                <Card className="p-8 h-full shadow-card hover:shadow-card-hover transition-elegant bg-white border-none">
+                  <MessageSquare className="w-12 h-12 text-rich-blue mb-6" />
+                  <p className="text-lg text-muted-foreground mb-6 leading-relaxed italic">
+                    "{testimonial.quote}"
+                  </p>
+                  <div className="flex items-center gap-2">
+                    <Star className="w-5 h-5 text-accent-gold fill-accent-gold" />
+                    <Star className="w-5 h-5 text-accent-gold fill-accent-gold" />
+                    <Star className="w-5 h-5 text-accent-gold fill-accent-gold" />
+                    <Star className="w-5 h-5 text-accent-gold fill-accent-gold" />
+                    <Star className="w-5 h-5 text-accent-gold fill-accent-gold" />
+                  </div>
+                  <p className="text-primary font-bold mt-4">— {testimonial.author}</p>
+                </Card>
               </motion.div>
             ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-hero">
+        <div className="container mx-auto px-4">
+          <motion.div {...fadeInUp} className="text-center max-w-3xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
+              ابدأ الآن
+            </h2>
+            <p className="text-xl text-white/90 mb-8 leading-relaxed">
+              احصل على استشارة قانونية أولية، ودعنا نتولى كل التفاصيل
+            </p>
+            <Button size="lg" className="bg-accent-gold hover:bg-accent-gold-light text-navy font-bold text-lg px-10 py-6 transition-elegant">
+              استشارة قانونية مجانية
+              <ArrowRight className="mr-2 w-5 h-5" />
+            </Button>
           </motion.div>
         </div>
       </section>
@@ -326,8 +573,8 @@ const Index = () => {
             className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto"
           >
             {[
-              { icon: Phone, title: "الهاتف", value: "772762090", link: "tel:+967772762090" },
-              { icon: Mail, title: "البريد الإلكتروني", value: "info@alnasser-law.com", link: "mailto:info@alnasser-law.com" },
+              { icon: Phone, title: "الجوال", value: "+967772762090", link: "tel:+967772762090" },
+              { icon: Phone, title: "واتس آب", value: "+967772762090", link: "https://wa.me/967772762090" },
               { icon: MapPin, title: "العنوان", value: "اليمن - صنعاء" },
               { icon: Clock, title: "ساعات العمل", value: "السبت - الخميس، 9 صباحاً - 5 مساءً" }
             ].map((contact, index) => (
