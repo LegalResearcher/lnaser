@@ -438,17 +438,17 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <motion.div {...fadeInUp} className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-black text-primary mb-4">
-              عن المحامي
+              المؤسس والمدير التنفيذي – أ. معين الناصر
             </h2>
             <div className="w-24 h-1 bg-gradient-gold mx-auto" />
           </motion.div>
           
           <motion.div
             {...fadeInUp}
-            className="max-w-4xl mx-auto"
+            className="max-w-5xl mx-auto"
           >
             <Card className="p-8 md:p-12 shadow-elegant bg-white border-none">
-              <div className="flex flex-col md:flex-row gap-8 items-center">
+              <div className="flex flex-col md:flex-row gap-8 items-start">
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
@@ -465,26 +465,76 @@ const Index = () => {
                   </div>
                 </motion.div>
                 
-                <div className="flex-1 text-center md:text-right">
-                  <h3 className="text-3xl md:text-4xl font-black text-primary mb-3">
-                    أ. معين الناصر
+                <div className="flex-1 text-right">
+                  <h3 className="text-3xl font-black text-primary mb-2">
+                    أ. معين الناصر – محامٍ ومستشار قانوني
                   </h3>
-                  <p className="text-xl text-rich-blue font-bold mb-6">
-                    محامٍ ومستشار قانوني
-                  </p>
                   <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                    محامٍ متخصص في القضايا المدنية والجنائية والتجارية، مع خبرة واسعة في تقديم الاستشارات القانونية وتمثيل العملاء أمام المحاكم اليمنية. نلتزم بتقديم خدمات قانونية احترافية تتسم بالجودة والمصداقية.
+                    حاصل على بكالوريوس شريعة وقانون من جامعة صنعاء، ويقود مكتب الناصر لتقديم خدمات قانونية مهنية ترتكز على الجودة والالتزام والمعايير العالمية في الأداء القانوني.
                   </p>
-                  <div className="flex flex-col gap-3 mt-8">
-                    <div className="flex items-center justify-center md:justify-start gap-3 text-muted-foreground">
-                      <MapPin className="w-5 h-5 text-rich-blue" />
-                      <span className="font-bold">اليمن - صنعاء</span>
-                    </div>
-                    <div className="flex items-center justify-center md:justify-start gap-3 text-muted-foreground">
-                      <Phone className="w-5 h-5 text-rich-blue" />
-                      <a href="tel:+967772762090" className="font-bold hover:text-rich-blue transition-smooth">
-                        772762090
-                      </a>
+
+                  <div className="mb-6">
+                    <h4 className="text-xl font-bold text-primary mb-4 flex items-center gap-2">
+                      <Briefcase className="w-6 h-6 text-rich-blue" />
+                      مجالات التخصص:
+                    </h4>
+                    <ul className="space-y-3 mr-8">
+                      <li className="flex items-start gap-2 text-muted-foreground">
+                        <CheckCircle className="w-5 h-5 text-rich-blue flex-shrink-0 mt-0.5" />
+                        <span>محامٍ ومستشار قانوني لعدد من الشركات التجارية المحلية</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-muted-foreground">
+                        <CheckCircle className="w-5 h-5 text-rich-blue flex-shrink-0 mt-0.5" />
+                        <span>محكّم قانوني مشارك في عدد من القضايا التجارية والمدنية</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-muted-foreground">
+                        <CheckCircle className="w-5 h-5 text-rich-blue flex-shrink-0 mt-0.5" />
+                        <span>متخصص في القضايا التجارية، الضريبية، المصرفية، إضافة إلى القضايا المدنية والجنائية والعمالية</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-muted-foreground">
+                        <CheckCircle className="w-5 h-5 text-rich-blue flex-shrink-0 mt-0.5" />
+                        <span>إعداد وصياغة العقود التجارية والعمالية والمدنية وتفسيرها وتكييفها</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-muted-foreground">
+                        <CheckCircle className="w-5 h-5 text-rich-blue flex-shrink-0 mt-0.5" />
+                        <span>مشارك في عدد من الندوات والفعاليات القانونية والحقوقية</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="mb-6">
+                    <h4 className="text-xl font-bold text-primary mb-3 flex items-center gap-2">
+                      <Target className="w-6 h-6 text-rich-blue" />
+                      رؤيته القيادية:
+                    </h4>
+                    <p className="text-muted-foreground leading-relaxed mr-8">
+                      الارتقاء بالخدمات القانونية في المكتب من خلال الدقة، النزاهة، والعمل المؤسسي، وتقديم حلول قانونية مبتكرة وفعّالة.
+                    </p>
+                  </div>
+
+                  <div className="mb-6">
+                    <h4 className="text-xl font-bold text-primary mb-3 flex items-center gap-2">
+                      <Heart className="w-6 h-6 text-rich-blue" />
+                      التزامه الشخصي:
+                    </h4>
+                    <p className="text-muted-foreground leading-relaxed mr-8">
+                      تقديم خدمات قانونية تعتمد على التحليل الدقيق والاستراتيجية المحكمة، مع متابعة مستمرة لضمان حماية حقوق العملاء وتحقيق أفضل النتائج.
+                    </p>
+                  </div>
+
+                  <div className="border-t border-muted pt-6 mt-6">
+                    <h4 className="text-xl font-bold text-primary mb-4">التواصل:</h4>
+                    <div className="flex flex-col gap-3">
+                      <div className="flex items-center gap-3 text-muted-foreground">
+                        <MapPin className="w-5 h-5 text-rich-blue" />
+                        <span className="font-bold">اليمن – صنعاء</span>
+                      </div>
+                      <div className="flex items-center gap-3 text-muted-foreground">
+                        <Phone className="w-5 h-5 text-rich-blue" />
+                        <a href="tel:+967772762090" className="font-bold hover:text-rich-blue transition-smooth">
+                          +967772762090
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
