@@ -3,6 +3,7 @@ import { Scale, Shield, FileText, Users, Award, Phone, Mail, MapPin, Clock, Targ
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { PWAInstallPrompt } from "@/components/PWAInstallPrompt";
+import FloatingWhatsAppButton from "@/components/FloatingWhatsAppButton";
 import lawyerPhoto from "@/assets/lawyer-photo.jpg";
 import logo from "@/assets/logo.png";
 
@@ -104,6 +105,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <PWAInstallPrompt />
+      <FloatingWhatsAppButton />
       
       {/* Navigation */}
       <motion.nav
