@@ -92,12 +92,29 @@ const Index = () => {
 
   const testimonials = [
     {
-      quote: "خدمة احترافية تتسم بالدقة والوضوح… أنصح بهم بشدة.",
-      author: "عميل شركة تجارية"
+      title: "دقة واحترافية عالية",
+      quote: "تعاملهم مُريح جداً. كل التفاصيل القانونية ماشية بالملي، وما نتعب في مراجعتها أو متابعتها. صراحة، نعتبرهم شريك عمل مش محامي بس.",
+      author: "أبو خالد، مدير شركة تجارية"
     },
     {
-      quote: "كان لهم الفضل في حل نزاع قانوني معقد بطريقة سريعة وآمنة.",
-      author: "مستثمر"
+      title: "حلول ذكية وحاسمة",
+      quote: "فكّوا تعقيدات القضية. كان نزاع مُتعب وأخذ من وقتي الكثير، وصدقاً، قدرتهم على إنهاء الموضوع بسرعة وبنتيجة مضمونة فاجأتني. شغل احترافي وبس.",
+      author: "أ. ن، مستثمر عقاري"
+    },
+    {
+      title: "حماية واستثمار آمن",
+      quote: "النظرة الثاقبة تفرق. استشارتهم المبكرة وفرت عليّ مبلغ كبير وقضية كنت داخل عليها بدون ما أدري. ما يضيع لك حق، وأنصح بالوقاية قبل العلاج معهم.",
+      author: "ناصر العمري (صاحب مشروع ناشئ)"
+    },
+    {
+      title: "دعم مستمر وأمان",
+      quote: "كلمة الحق، أمان وراحة بال. سرعة الرد والتجاوب كانت تريحني جداً، خاصة في القضايا الحساسة. في فترة التوتر، ما حسيت إني لوحدي أبدًا.",
+      author: "س.أ (قضايا الأحوال الشخصية)"
+    },
+    {
+      title: "دفاع حاسم ومهنية مطلقة",
+      quote: "في أصعب لحظاتي، كانوا سند. صار تدخلهم في الوقت الحرج، والحمد لله، الشغل النظيف والمهني حمى موقفي وطلعت منها بأقل الخسائر الممكنة.",
+      author: "أحد الموكلين السابقين (قضية جنائية)"
     }
   ];
 
@@ -555,23 +572,24 @@ const Index = () => {
             initial="initial"
             whileInView="whileInView"
             viewport={{ once: true }}
-            className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto"
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto"
           >
             {testimonials.map((testimonial, index) => (
               <motion.div key={index} variants={fadeInUp}>
                 <Card className="p-8 h-full shadow-card hover:shadow-card-hover transition-elegant bg-white border-none">
-                  <MessageSquare className="w-12 h-12 text-rich-blue mb-6" />
-                  <p className="text-lg text-muted-foreground mb-6 leading-relaxed italic">
+                  <MessageSquare className="w-12 h-12 text-rich-blue mb-4" />
+                  <h3 className="text-xl font-bold text-primary mb-4">{testimonial.title}</h3>
+                  <p className="text-base text-muted-foreground mb-6 leading-relaxed italic">
                     "{testimonial.quote}"
                   </p>
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-2 mb-3">
                     <Star className="w-5 h-5 text-accent-gold fill-accent-gold" />
                     <Star className="w-5 h-5 text-accent-gold fill-accent-gold" />
                     <Star className="w-5 h-5 text-accent-gold fill-accent-gold" />
                     <Star className="w-5 h-5 text-accent-gold fill-accent-gold" />
                     <Star className="w-5 h-5 text-accent-gold fill-accent-gold" />
                   </div>
-                  <p className="text-primary font-bold mt-4">— {testimonial.author}</p>
+                  <p className="text-primary font-bold text-sm">— {testimonial.author}</p>
                 </Card>
               </motion.div>
             ))}
@@ -584,7 +602,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <motion.div {...fadeInUp} className="text-center max-w-3xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
-              ابدأ الآن
+              حماية حقوقك تبدأ هنا
             </h2>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
               احصل على استشارة قانونية أولية، ودعنا نتولى كل التفاصيل
