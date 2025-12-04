@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { PWAInstallPrompt } from "@/components/PWAInstallPrompt";
 import FloatingWhatsAppButton from "@/components/FloatingWhatsAppButton";
-import lawyerPhoto from "@/assets/lawyer-photo.jpg";
 import logo from "@/assets/logo.png";
 
 const Index = () => {
@@ -467,24 +466,7 @@ const Index = () => {
             className="max-w-4xl mx-auto"
           >
             <Card className="p-8 md:p-12 shadow-elegant bg-white border-none">
-              <div className="flex flex-col md:flex-row gap-8 items-center">
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6 }}
-                  className="flex-shrink-0"
-                >
-                  <div className="w-64 h-64 rounded-2xl overflow-hidden shadow-card border-4 border-accent-gold">
-                    <img 
-                      src={lawyerPhoto} 
-                      alt="أ. معين الناصر" 
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </motion.div>
-                
-                <div className="flex-1 text-center md:text-right">
+              <div className="text-center md:text-right">
                   <h3 className="text-3xl md:text-4xl font-black text-primary mb-3">
                     أ. معين الناصر – محامٍ ومستشار قانوني
                   </h3>
@@ -548,7 +530,6 @@ const Index = () => {
                     </div>
                   </div>
                 </div>
-              </div>
             </Card>
           </motion.div>
         </div>
