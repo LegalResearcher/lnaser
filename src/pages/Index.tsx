@@ -536,6 +536,111 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Successful Cases Section */}
+      <section className="py-24 bg-gradient-to-b from-background to-muted">
+        <div className="container mx-auto px-4">
+          <motion.div {...fadeInUp} className="text-center mb-16">
+            <Award className="w-16 h-16 text-accent-gold mx-auto mb-6" />
+            <h2 className="text-4xl md:text-5xl font-black text-primary mb-4">
+              سجل النجاحات القانونية
+            </h2>
+            <div className="w-24 h-1 bg-gradient-gold mx-auto mb-6" />
+            <p className="text-xl text-muted-foreground">
+              إنجازات تعكس خبرتنا وتفانينا في حماية حقوق عملائنا
+            </p>
+          </motion.div>
+          
+          <motion.div
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true }}
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16"
+          >
+            {[
+              { 
+                icon: Briefcase, 
+                category: "القضايا التجارية", 
+                count: "45+", 
+                description: "نزاعات تجارية وشراكات تم حلها بنجاح",
+                highlight: "نسبة نجاح 92%"
+              },
+              { 
+                icon: FileText, 
+                category: "العقود والاتفاقيات", 
+                count: "300+", 
+                description: "عقد تجاري ومدني تمت صياغته ومراجعته",
+                highlight: "حماية قانونية كاملة"
+              },
+              { 
+                icon: Scale, 
+                category: "القضايا المدنية", 
+                count: "35+", 
+                description: "قضية مدنية وتعويضات تم الفصل فيها",
+                highlight: "استرداد الحقوق"
+              },
+              { 
+                icon: Shield, 
+                category: "القضايا الجنائية", 
+                count: "20+", 
+                description: "قضية جنائية تم الدفاع فيها بنجاح",
+                highlight: "دفاع قوي ومهني"
+              },
+              { 
+                icon: Users, 
+                category: "التحكيم والوساطة", 
+                count: "25+", 
+                description: "نزاع تم حله عبر التحكيم والوساطة",
+                highlight: "حلول سريعة وفعّالة"
+              },
+              { 
+                icon: TrendingUp, 
+                category: "الاستشارات القانونية", 
+                count: "500+", 
+                description: "استشارة قانونية قدمت للشركات والأفراد",
+                highlight: "وقاية قبل العلاج"
+              }
+            ].map((item, index) => (
+              <motion.div key={index} variants={fadeInUp}>
+                <Card className="p-8 h-full shadow-card hover:shadow-card-hover transition-elegant bg-white border-none group hover:-translate-y-2">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-14 h-14 rounded-xl bg-rich-blue/10 flex items-center justify-center group-hover:bg-rich-blue transition-elegant">
+                      <item.icon className="w-7 h-7 text-rich-blue group-hover:text-white transition-elegant" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-primary">{item.category}</h3>
+                      <span className="text-3xl font-black text-accent-gold">{item.count}</span>
+                    </div>
+                  </div>
+                  <p className="text-muted-foreground mb-4 leading-relaxed">{item.description}</p>
+                  <div className="flex items-center gap-2 text-rich-blue font-bold">
+                    <CheckCircle className="w-5 h-5" />
+                    <span>{item.highlight}</span>
+                  </div>
+                </Card>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          {/* Summary Stats */}
+          <motion.div {...fadeInUp} className="bg-gradient-hero rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+              {[
+                { number: "925+", label: "قضية ومعاملة" },
+                { number: "90%", label: "نسبة النجاح" },
+                { number: "50+", label: "عميل راضٍ" },
+                { number: "10+", label: "سنوات خبرة" }
+              ].map((stat, index) => (
+                <div key={index}>
+                  <div className="text-4xl md:text-5xl font-black text-accent-gold mb-2">{stat.number}</div>
+                  <div className="text-white/90 font-medium">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Testimonials Section */}
       <section className="py-24 bg-muted">
         <div className="container mx-auto px-4">
