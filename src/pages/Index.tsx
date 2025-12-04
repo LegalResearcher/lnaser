@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Scale, Shield, FileText, Users, Award, Phone, Mail, MapPin, Clock, Target, Eye, Heart, CheckCircle, Briefcase, TrendingUp, Star, MessageSquare, ArrowRight } from "lucide-react";
+import { Scale, Shield, FileText, Users, Award, Phone, Mail, MapPin, Clock, Target, Eye, Heart, CheckCircle, Briefcase, TrendingUp, Star, MessageSquare, ArrowRight, HelpCircle } from "lucide-react";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { PWAInstallPrompt } from "@/components/PWAInstallPrompt";
@@ -574,6 +575,80 @@ const Index = () => {
                 </Card>
               </motion.div>
             ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-24 bg-background">
+        <div className="container mx-auto px-4">
+          <motion.div {...fadeInUp} className="text-center mb-16">
+            <HelpCircle className="w-16 h-16 text-rich-blue mx-auto mb-6" />
+            <h2 className="text-4xl md:text-5xl font-black text-primary mb-4">
+              الأسئلة الشائعة
+            </h2>
+            <div className="w-24 h-1 bg-gradient-gold mx-auto mb-6" />
+            <p className="text-xl text-muted-foreground">
+              إجابات على أكثر الأسئلة شيوعاً حول خدماتنا القانونية
+            </p>
+          </motion.div>
+          
+          <motion.div {...fadeInUp} className="max-w-4xl mx-auto">
+            <Accordion type="single" collapsible className="space-y-4">
+              <AccordionItem value="item-1" className="bg-white rounded-xl shadow-card border-none px-6">
+                <AccordionTrigger className="text-lg font-bold text-primary hover:text-rich-blue text-right">
+                  كيف يمكنني حجز استشارة قانونية؟
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed text-right">
+                  يمكنك حجز استشارة قانونية عبر التواصل معنا مباشرة عبر الواتساب أو الاتصال بنا على الرقم المخصص. سنقوم بتحديد موعد مناسب لمناقشة قضيتك بالتفصيل.
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="item-2" className="bg-white rounded-xl shadow-card border-none px-6">
+                <AccordionTrigger className="text-lg font-bold text-primary hover:text-rich-blue text-right">
+                  ما هي تكلفة الاستشارة القانونية الأولية؟
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed text-right">
+                  تختلف تكلفة الاستشارة حسب نوع القضية وتعقيدها. نقدم استشارة أولية لتقييم القضية، وبعدها يتم تحديد التكلفة بشكل شفاف وواضح قبل البدء في أي إجراءات.
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="item-3" className="bg-white rounded-xl shadow-card border-none px-6">
+                <AccordionTrigger className="text-lg font-bold text-primary hover:text-rich-blue text-right">
+                  ما هي مجالات القانون التي تتخصصون فيها؟
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed text-right">
+                  نتخصص في مجالات متعددة تشمل: قانون الشركات والأعمال، العقود والاتفاقيات، القانون المدني، القانون الجنائي، التحكيم وتسوية المنازعات، بالإضافة إلى التوثيق والتحقيقات القانونية.
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="item-4" className="bg-white rounded-xl shadow-card border-none px-6">
+                <AccordionTrigger className="text-lg font-bold text-primary hover:text-rich-blue text-right">
+                  هل تقدمون خدمات للشركات والأفراد؟
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed text-right">
+                  نعم، نقدم خدماتنا القانونية لكل من الشركات والأفراد. لدينا خبرة واسعة في التعامل مع القضايا التجارية للشركات وكذلك القضايا الشخصية والأحوال المدنية للأفراد.
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="item-5" className="bg-white rounded-xl shadow-card border-none px-6">
+                <AccordionTrigger className="text-lg font-bold text-primary hover:text-rich-blue text-right">
+                  كم من الوقت تستغرق القضية عادةً؟
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed text-right">
+                  تختلف مدة القضية حسب نوعها وتعقيدها. بعض القضايا قد تُحل في أسابيع، بينما قد تستغرق قضايا أخرى شهوراً. نحرص على إبقائك على اطلاع دائم بتطورات قضيتك ونعمل على إنهائها في أسرع وقت ممكن.
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="item-6" className="bg-white rounded-xl shadow-card border-none px-6">
+                <AccordionTrigger className="text-lg font-bold text-primary hover:text-rich-blue text-right">
+                  هل معلوماتي ستبقى سرية؟
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed text-right">
+                  بالتأكيد، السرية التامة هي من أهم قيمنا. جميع المعلومات التي تشاركها معنا محمية بالكامل ولا يتم الإفصاح عنها لأي طرف ثالث تحت أي ظرف من الظروف.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </motion.div>
         </div>
       </section>
