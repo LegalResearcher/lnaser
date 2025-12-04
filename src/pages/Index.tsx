@@ -648,6 +648,60 @@ const Index = () => {
                   بالتأكيد، السرية التامة هي من أهم قيمنا. جميع المعلومات التي تشاركها معنا محمية بالكامل ولا يتم الإفصاح عنها لأي طرف ثالث تحت أي ظرف من الظروف.
                 </AccordionContent>
               </AccordionItem>
+              
+              <AccordionItem value="item-7" className="bg-white rounded-xl shadow-card border-none px-6">
+                <AccordionTrigger className="text-lg font-bold text-primary hover:text-rich-blue text-right">
+                  ما هي المستندات المطلوبة لبدء القضية؟
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed text-right">
+                  تختلف المستندات المطلوبة حسب نوع القضية. بشكل عام، ستحتاج إلى الهوية الشخصية، والعقود أو الوثائق ذات الصلة بالقضية. سنرشدك خلال الاستشارة الأولية إلى كافة المستندات اللازمة.
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="item-8" className="bg-white rounded-xl shadow-card border-none px-6">
+                <AccordionTrigger className="text-lg font-bold text-primary hover:text-rich-blue text-right">
+                  هل يمكنني التواصل معكم في أي وقت؟
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed text-right">
+                  نعم، نحرص على التواصل المستمر مع عملائنا. يمكنك التواصل معنا خلال ساعات العمل الرسمية، وفي الحالات الطارئة يمكنك التواصل عبر الواتساب وسنرد عليك في أقرب وقت ممكن.
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="item-9" className="bg-white rounded-xl shadow-card border-none px-6">
+                <AccordionTrigger className="text-lg font-bold text-primary hover:text-rich-blue text-right">
+                  كيف يتم تحديد أتعاب المحاماة؟
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed text-right">
+                  يتم تحديد الأتعاب بناءً على عدة عوامل منها: نوع القضية، درجة تعقيدها، الوقت والجهد المتوقع، ومرحلة التقاضي. نقدم لك عرض أتعاب واضح ومفصل قبل البدء في العمل مع ضمان الشفافية التامة.
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="item-10" className="bg-white rounded-xl shadow-card border-none px-6">
+                <AccordionTrigger className="text-lg font-bold text-primary hover:text-rich-blue text-right">
+                  هل تقدمون خدمة صياغة العقود؟
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed text-right">
+                  نعم، نقدم خدمات متكاملة في صياغة ومراجعة العقود التجارية والمدنية والعمالية. نحرص على حماية حقوقك وضمان سلامة العقد من الناحية القانونية قبل التوقيع.
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="item-11" className="bg-white rounded-xl shadow-card border-none px-6">
+                <AccordionTrigger className="text-lg font-bold text-primary hover:text-rich-blue text-right">
+                  ما هي إجراءات رفع دعوى قضائية؟
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed text-right">
+                  تبدأ الإجراءات بدراسة القضية وتقييم فرص النجاح، ثم إعداد صحيفة الدعوى وتقديمها للمحكمة المختصة. نتولى جميع الإجراءات نيابة عنك من التسجيل حتى صدور الحكم ومتابعة التنفيذ.
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="item-12" className="bg-white rounded-xl shadow-card border-none px-6">
+                <AccordionTrigger className="text-lg font-bold text-primary hover:text-rich-blue text-right">
+                  هل يمكن حل النزاع دون اللجوء للمحكمة؟
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed text-right">
+                  نعم، نسعى دائماً للحلول الودية أولاً من خلال التفاوض أو الوساطة أو التحكيم. هذه الطرق غالباً ما تكون أسرع وأقل تكلفة. في حال فشل الحلول الودية، نلجأ للقضاء لحماية حقوقك.
+                </AccordionContent>
+              </AccordionItem>
             </Accordion>
           </motion.div>
         </div>
