@@ -253,7 +253,7 @@ const Index = () => {
           <motion.div {...fadeInUp} className="max-w-4xl mx-auto text-center">
             <Target className="w-20 h-20 text-accent-gold mx-auto mb-6" />
             <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
-              عرض القيمة الفريدة
+              لماذا تختارنا؟
             </h2>
             <p className="text-xl md:text-2xl text-white/95 leading-relaxed">
               نحن لا نكتفي بتقديم الاستشارات… بل نقدّم <span className="font-bold text-accent-gold">حلولًا قانونية حقيقية</span> تُبنى على فهم شامل للقضية، واستراتيجيات مدروسة، وتنفيذ فعّال يضمن تحقيق أفضل النتائج
