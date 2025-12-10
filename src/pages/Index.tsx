@@ -6,6 +6,7 @@ import { Card } from "@/components/ui/card";
 import { PWAInstallPrompt } from "@/components/PWAInstallPrompt";
 import FloatingWhatsAppButton from "@/components/FloatingWhatsAppButton";
 import logo from "@/assets/logo.png";
+import founderImage from "@/assets/founder.jpg";
 
 const Index = () => {
   const fadeInUp = {
@@ -467,10 +468,19 @@ const Index = () => {
             className="max-w-4xl mx-auto"
           >
             <Card className="p-8 md:p-12 shadow-elegant bg-white border-none">
-              <div className="text-center md:text-right">
+              <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
+                <div className="flex-shrink-0">
+                  <img 
+                    src={founderImage} 
+                    alt="أ. معين الناصر" 
+                    className="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover shadow-elegant border-4 border-accent-gold"
+                  />
+                </div>
+                <div className="text-center md:text-right flex-1">
                   <h3 className="text-3xl md:text-4xl font-black text-primary mb-3">
-                    أ. معين الناصر – محامٍ ومستشار قانوني
+                    أ. معين الناصر
                   </h3>
+                  <p className="text-xl text-rich-blue font-bold mb-4">محامٍ ومستشار قانوني</p>
                   <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                     حاصل على بكالوريوس شريعة وقانون من جامعة صنعاء، ويقود مكتب الناصر لتقديم خدمات قانونية مهنية ترتكز على الجودة والالتزام والمعايير العالمية في الأداء القانوني.
                   </p>
@@ -531,6 +541,7 @@ const Index = () => {
                     </div>
                   </div>
                 </div>
+              </div>
             </Card>
           </motion.div>
         </div>
