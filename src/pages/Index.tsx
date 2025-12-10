@@ -6,6 +6,7 @@ import { Card } from "@/components/ui/card";
 import { PWAInstallPrompt } from "@/components/PWAInstallPrompt";
 import FloatingWhatsAppButton from "@/components/FloatingWhatsAppButton";
 import logo from "@/assets/logo.png";
+import lawyerPhoto from "@/assets/lawyer-photo.jpg";
 
 const Index = () => {
   const fadeInUp = {
@@ -174,8 +175,20 @@ const Index = () => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, ease: "easeOut" }}
+              className="mb-8"
             >
-              <Scale className="w-24 h-24 text-accent-gold mx-auto mb-8 filter drop-shadow-lg" />
+              <div className="relative inline-block">
+                <div className="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-accent-gold shadow-elegant mx-auto">
+                  <img 
+                    src={lawyerPhoto} 
+                    alt="أ. معين الناصر" 
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
+                <div className="absolute -bottom-2 -right-2 w-12 h-12 bg-accent-gold rounded-full flex items-center justify-center">
+                  <Scale className="w-6 h-6 text-navy" />
+                </div>
+              </div>
             </motion.div>
             
             <motion.h1
