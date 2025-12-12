@@ -542,7 +542,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <motion.div {...fadeInUp} className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-black text-primary mb-4">
-              المؤسس والمدير التنفيذي
+              ​"مؤسس ومدير تنفيذي. نُقدم خدمات استشارية، ونولي اهتماماً استراتيجياً بمجال التحكيم وفض المنازعات. نلتزم بتقديم حلول قانونية مدروسة، تهدف إلى حماية مصالح العملاء وتعزيز موقفهم النظامي بأعلى معايير المهنية."
             </h2>
             <div className="w-24 h-1 bg-gradient-gold mx-auto" />
           </motion.div>
