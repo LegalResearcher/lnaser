@@ -564,7 +564,7 @@ const Index = () => {
                   <h3 className="text-3xl md:text-4xl font-black text-primary mb-3">
                     أ. معين الناصر
                   </h3>
-                  <p className="text-xl text-rich-blue font-bold mb-6">المؤسس والمدير التنفيذي</p>
+                  <p className="text-xl text-rich-blue font-bold mb-6">​"مؤسس ومدير تنفيذي. نُقدم خدمات استشارية، ونولي اهتماماً استراتيجياً بمجال التحكيم وفض المنازعات. نلتزم بتقديم حلول قانونية مدروسة، تهدف إلى حماية مصالح العملاء وتعزيز موقفهم النظامي بأعلى معايير المهنية."</p>
                   
                   <div className="mb-6">
                     <h4 className="text-xl font-bold text-rich-blue mb-3">الرؤية القيادية:</h4>
