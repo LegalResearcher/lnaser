@@ -175,8 +175,13 @@ const Index = () => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, ease: "easeOut" }}
+              className="mb-8"
             >
-              <Scale className="w-24 h-24 text-accent-gold mx-auto mb-8 filter drop-shadow-lg" />
+              <img 
+                src={logo} 
+                alt="مكتب الناصر للمحاماة" 
+                className="w-32 h-32 md:w-40 md:h-40 mx-auto object-contain filter drop-shadow-2xl"
+              />
             </motion.div>
             
             <motion.h1
