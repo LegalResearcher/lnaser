@@ -141,10 +141,7 @@ const Index = () => {
               className="flex items-center gap-3"
             >
               <img src={logo} alt="مكتب الناصر للمحاماة" className="w-12 h-12 object-contain" />
-              <div>
-                <h1 className="text-white font-bold text-xl">مكتب الناصر للمحاماة</h1>
-                <p className="text-accent-gold text-sm">أ. معين الناصر</p>
-              </div>
+              <h1 className="text-white font-bold text-xl">مكتب الناصر للمحاماة</h1>
             </motion.div>
             <motion.div
               initial={{ opacity: 0 }}
@@ -195,15 +192,6 @@ const Index = () => {
               <span className="text-gradient-gold">للمحاماة والاستشارات القانونية</span>
             </motion.h1>
             
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="mb-8"
-            >
-              <p className="text-2xl md:text-3xl text-white/90 font-bold mb-2">أ. معين الناصر</p>
-              <p className="text-lg md:text-xl text-white/80">محامٍ ومستشار قانوني</p>
-            </motion.div>
             
             <motion.p
               initial={{ opacity: 0, y: 30 }}
@@ -485,9 +473,9 @@ const Index = () => {
                   <h3 className="text-3xl md:text-4xl font-black text-primary mb-3">
                     أ. معين الناصر
                   </h3>
-                  <p className="text-xl text-rich-blue font-bold mb-4">محامٍ ومستشار قانوني</p>
+                  <p className="text-xl text-rich-blue font-bold mb-4">المؤسس والمدير التنفيذي</p>
                   <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                    حاصل على بكالوريوس شريعة وقانون من جامعة صنعاء، ويقود مكتب الناصر لتقديم خدمات قانونية مهنية ترتكز على الجودة والالتزام والمعايير العالمية في الأداء القانوني.
+                    نُقدم خدمات استشارية، ونولي اهتماماً استراتيجياً بمجال التحكيم وفض المنازعات. نلتزم بتقديم حلول قانونية مدروسة، تهدف إلى حماية مصالح العملاء وتعزيز موقفهم النظامي بأعلى معايير المهنية.
                   </p>
                   
                   <div className="mb-6">
