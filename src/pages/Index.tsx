@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Scale, Shield, FileText, Users, Award, Phone, Mail, MapPin, Clock, Target, Eye, Heart, CheckCircle, Briefcase, TrendingUp, Star, MessageSquare, ArrowRight, HelpCircle } from "lucide-react";
+import { Scale, Shield, FileText, Users, Award, Phone, Mail, MapPin, Clock, Target, Eye, Heart, CheckCircle, Briefcase, TrendingUp, Star, MessageSquare, ArrowRight, HelpCircle, Facebook, Twitter, Send } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -892,15 +892,51 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-navy py-12">
+      <footer className="bg-navy py-16">
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center justify-center text-center">
-            <Scale className="w-12 h-12 text-accent-gold mb-4" />
-            <h3 className="text-2xl font-bold text-white mb-2">مكتب الناصر للمحاماة والاستشارات القانونية</h3>
+            <img src={logo} alt="مكتب الناصر للمحاماة" className="w-16 h-16 object-contain mb-4" />
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">مكتب الناصر للمحاماة والاستشارات القانونية</h3>
             <p className="text-accent-gold text-lg mb-6">أ. معين الناصر</p>
             <p className="text-white/70 mb-8">احترافية • مصداقية • تميز</p>
-            <p className="text-white/50 text-sm">
-              جميع الحقوق محفوظة © {new Date().getFullYear()} مكتب الناصر للمحاماة
+            
+            {/* Social Media Links */}
+            <div className="flex items-center gap-4 mb-10">
+              <a 
+                href="https://www.facebook.com/share/17jmG5z1Zv/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-full bg-white/10 hover:bg-accent-gold/20 flex items-center justify-center transition-smooth group"
+                aria-label="Facebook"
+              >
+                <Facebook className="w-5 h-5 text-white group-hover:text-accent-gold transition-smooth" />
+              </a>
+              <a 
+                href="https://x.com/Alnasr2024?t=0-fRC0kaJ6N15SWjOAbWwQ&s=09" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-full bg-white/10 hover:bg-accent-gold/20 flex items-center justify-center transition-smooth group"
+                aria-label="Twitter"
+              >
+                <Twitter className="w-5 h-5 text-white group-hover:text-accent-gold transition-smooth" />
+              </a>
+              <a 
+                href="https://t.me/+967772762090" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-full bg-white/10 hover:bg-accent-gold/20 flex items-center justify-center transition-smooth group"
+                aria-label="Telegram"
+              >
+                <Send className="w-5 h-5 text-white group-hover:text-accent-gold transition-smooth" />
+              </a>
+            </div>
+
+            {/* Divider */}
+            <div className="w-full max-w-2xl h-px bg-white/20 mb-8" />
+
+            {/* Copyright */}
+            <p className="text-white/60 text-sm md:text-base leading-relaxed">
+              © {new Date().getFullYear()} الناصر تِك للحلول الرقمية (Alnasser Tech Digital Solutions). جميع الحقوق محفوظة.
             </p>
           </div>
         </div>
