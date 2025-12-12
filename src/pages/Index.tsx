@@ -1,4 +1,4 @@
-إليك الكود كاملاً بعد تعديل جميع النصوص، القوائم، والأقسام وفقاً للصيغة النهائية المعتمدة (الآمنة والمهنية)، مع تعديل هيكلية عرض البيانات لتتناسب مع المحتوى الجديد (مثل استبدال الأرقام بالنصوص النوعية في قسم ركائز الأداء).
+﻿إليك الكود كاملاً بعد تعديل جميع النصوص، القوائم، والأقسام وفقاً للصيغة النهائية المعتمدة (الآمنة والمهنية)، مع تعديل هيكلية عرض البيانات لتتناسب مع المحتوى الجديد (مثل استبدال الأرقام بالنصوص النوعية في قسم ركائز الأداء).
 import { motion } from "framer-motion";
 import { Scale, Shield, FileText, Users, Award, Phone, Mail, MapPin, Clock, Target, Eye, Heart, CheckCircle, Briefcase, TrendingUp, Star, MessageSquare, ArrowRight, HelpCircle, Facebook, Twitter, Send } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
