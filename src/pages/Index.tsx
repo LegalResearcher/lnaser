@@ -326,14 +326,14 @@ const Index = () => {
       </section>
 
       {/* Founder Section - Premium International Style */}
-      <section className="py-24 bg-background relative overflow-hidden">
+      <section className="py-32 bg-background relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-accent-gold/5 via-transparent to-transparent" />
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             {...fadeInUp}
             className="max-w-5xl mx-auto"
           >
-            <div className="grid md:grid-cols-5 gap-12 items-center">
+            <div className="grid md:grid-cols-5 gap-16 items-center">
               {/* Image Column */}
               <motion.div 
                 className="md:col-span-2 flex justify-center"
@@ -342,43 +342,52 @@ const Index = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
               >
-                <div className="relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-accent-gold/20 to-rich-blue/20 rounded-full blur-xl scale-110" />
-                  <img 
-                    src={founderImage} 
-                    alt="أ. معين الناصر" 
-                    className="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover shadow-xl border-3 border-accent-gold relative z-10"
-                  />
-                  <div className="absolute -bottom-2 -right-2 w-14 h-14 bg-accent-gold rounded-full flex items-center justify-center shadow-lg z-20">
-                    <Award className="w-7 h-7 text-navy" />
+                <div className="relative group">
+                  {/* Outer glow effect */}
+                  <div className="absolute -inset-4 bg-gradient-to-br from-accent-gold/30 via-rich-blue/20 to-accent-gold/30 rounded-2xl blur-2xl opacity-60 group-hover:opacity-80 transition-all duration-500" />
+                  
+                  {/* Image container with rounded corners */}
+                  <div className="relative bg-gradient-to-br from-accent-gold via-accent-gold/80 to-rich-blue p-1 rounded-2xl shadow-2xl">
+                    <img 
+                      src={founderImage} 
+                      alt="أ. معين الناصر" 
+                      className="w-44 h-44 md:w-52 md:h-52 rounded-xl object-cover relative z-10"
+                    />
+                  </div>
+                  
+                  {/* Award badge */}
+                  <div className="absolute -bottom-3 -right-3 w-12 h-12 bg-gradient-to-br from-accent-gold to-accent-gold/80 rounded-xl flex items-center justify-center shadow-lg z-20 rotate-12">
+                    <Award className="w-6 h-6 text-navy -rotate-12" />
                   </div>
                 </div>
               </motion.div>
 
               {/* Content Column */}
               <motion.div 
-                className="md:col-span-3 text-center md:text-right"
+                className="md:col-span-3 text-center md:text-right space-y-6"
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                <div className="inline-block bg-accent-gold/10 text-rich-blue font-bold text-sm px-4 py-2 rounded-full mb-4">
+                <div className="inline-block bg-accent-gold/10 text-rich-blue font-bold text-sm px-5 py-2.5 rounded-full border border-accent-gold/20">
                   المؤسس والمدير التنفيذي
                 </div>
-                <h2 className="text-4xl md:text-5xl font-black text-primary mb-6">
+                
+                <h2 className="text-4xl md:text-5xl font-black text-primary">
                   أ.معين الناصر
                 </h2>
-                <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-                  "مؤسس ومدير تنفيذي. نُقدم خدمات استشارية، ونولي اهتماماً استراتيجياً بمجال التحكيم وفض المنازعات. نلتزم بتقديم حلول قانونية مدروسة، تهدف إلى حماية مصالح العملاء وتعزيز موقفهم النظامي بأعلى معايير المهنية."
+                
+                <p className="text-lg md:text-xl text-muted-foreground leading-loose md:leading-loose text-center md:text-right">
+                  مؤسس ومدير تنفيذي. نُقدم خدمات استشارية، ونولي اهتماماً استراتيجياً بمجال التحكيم وفض المنازعات. نلتزم بتقديم حلول قانونية مدروسة، تهدف إلى حماية مصالح العملاء وتعزيز موقفهم النظامي بأعلى معايير المهنية.
                 </p>
                 
-                <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-                  <div className="flex items-center gap-2 bg-muted px-4 py-2 rounded-full">
+                <div className="flex flex-wrap gap-4 justify-center md:justify-start pt-4">
+                  <div className="flex items-center gap-3 bg-muted px-5 py-3 rounded-xl border border-border/50">
                     <MapPin className="w-5 h-5 text-rich-blue" />
                     <span className="font-bold text-foreground">اليمن - صنعاء</span>
                   </div>
-                  <a href="tel:+967772762090" className="flex items-center gap-2 bg-rich-blue text-white px-4 py-2 rounded-full hover:bg-navy transition-smooth">
+                  <a href="tel:+967772762090" className="flex items-center gap-3 bg-rich-blue text-white px-5 py-3 rounded-xl hover:bg-navy transition-smooth shadow-lg hover:shadow-xl">
                     <Phone className="w-5 h-5" />
                     <span className="font-bold">+967772762090</span>
                   </a>
