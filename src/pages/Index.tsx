@@ -325,6 +325,70 @@ const Index = () => {
         </motion.div>
       </section>
 
+      {/* Founder Section - Premium International Style */}
+      <section className="py-24 bg-background relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-accent-gold/5 via-transparent to-transparent" />
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div
+            {...fadeInUp}
+            className="max-w-5xl mx-auto"
+          >
+            <div className="grid md:grid-cols-5 gap-12 items-center">
+              {/* Image Column */}
+              <motion.div 
+                className="md:col-span-2 flex justify-center"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+              >
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent-gold/30 to-rich-blue/30 rounded-full blur-2xl scale-110" />
+                  <img 
+                    src={founderImage} 
+                    alt="أ. معين الناصر" 
+                    className="w-64 h-64 md:w-72 md:h-72 rounded-full object-cover shadow-2xl border-4 border-accent-gold relative z-10"
+                  />
+                  <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-accent-gold rounded-full flex items-center justify-center shadow-xl z-20">
+                    <Award className="w-12 h-12 text-navy" />
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Content Column */}
+              <motion.div 
+                className="md:col-span-3 text-center md:text-right"
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              >
+                <div className="inline-block bg-accent-gold/10 text-rich-blue font-bold text-sm px-4 py-2 rounded-full mb-4">
+                  المؤسس والمدير التنفيذي
+                </div>
+                <h2 className="text-4xl md:text-5xl font-black text-primary mb-6">
+                  أ.معين الناصر
+                </h2>
+                <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+                  "مؤسس ومدير تنفيذي. نُقدم خدمات استشارية، ونولي اهتماماً استراتيجياً بمجال التحكيم وفض المنازعات. نلتزم بتقديم حلول قانونية مدروسة، تهدف إلى حماية مصالح العملاء وتعزيز موقفهم النظامي بأعلى معايير المهنية."
+                </p>
+                
+                <div className="flex flex-wrap gap-4 justify-center md:justify-start">
+                  <div className="flex items-center gap-2 bg-muted px-4 py-2 rounded-full">
+                    <MapPin className="w-5 h-5 text-rich-blue" />
+                    <span className="font-bold text-foreground">اليمن - صنعاء</span>
+                  </div>
+                  <a href="tel:+967772762090" className="flex items-center gap-2 bg-rich-blue text-white px-4 py-2 rounded-full hover:bg-navy transition-smooth">
+                    <Phone className="w-5 h-5" />
+                    <span className="font-bold">+967772762090</span>
+                  </a>
+                </div>
+              </motion.div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Value Proposition Section */}
       <section className="py-24 bg-gradient-accent">
         <div className="container mx-auto px-4">
@@ -537,55 +601,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* About Lawyer Section */}
-      <section className="py-24 bg-background">
-        <div className="container mx-auto px-4">
-          <motion.div {...fadeInUp} className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black text-primary mb-4">
-              المؤسس والمدير التنفيذي
-            </h2>
-            <div className="w-24 h-1 bg-gradient-gold mx-auto" />
-          </motion.div>
-          
-          <motion.div
-            {...fadeInUp}
-            className="max-w-4xl mx-auto"
-          >
-            <Card className="p-8 md:p-12 shadow-elegant bg-white border-none">
-              <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
-                <div className="flex-shrink-0">
-                  <img 
-                    src={founderImage} 
-                    alt="أ. معين الناصر" 
-                    className="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover shadow-elegant border-4 border-accent-gold"
-                  />
-                </div>
-                <div className="text-center md:text-right flex-1">
-                  <h3 className="text-3xl md:text-4xl font-black text-primary mb-4">
-                    أ.معين الناصر
-                  </h3>
-                  <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                    "مؤسس ومدير تنفيذي. نُقدم خدمات استشارية، ونولي اهتماماً استراتيجياً بمجال التحكيم وفض المنازعات. نلتزم بتقديم حلول قانونية مدروسة، تهدف إلى حماية مصالح العملاء وتعزيز موقفهم النظامي بأعلى معايير المهنية."
-                  </p>
-
-                  <div className="flex flex-col gap-3">
-                    <div className="flex items-center justify-center md:justify-start gap-3 text-muted-foreground">
-                      <MapPin className="w-5 h-5 text-rich-blue" />
-                      <span className="font-bold">اليمن - صنعاء</span>
-                    </div>
-                    <div className="flex items-center justify-center md:justify-start gap-3 text-muted-foreground">
-                      <Phone className="w-5 h-5 text-rich-blue" />
-                      <a href="tel:+967772762090" className="font-bold hover:text-rich-blue transition-smooth">
-                        +967772762090
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </Card>
-          </motion.div>
-        </div>
-      </section>
 
       {/* Testimonials Section */}
       <section className="py-24 bg-muted">
