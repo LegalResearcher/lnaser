@@ -343,14 +343,14 @@ const Index = () => {
                 transition={{ duration: 0.8 }}
               >
                 <div className="relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-accent-gold/30 to-rich-blue/30 rounded-full blur-2xl scale-110" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent-gold/20 to-rich-blue/20 rounded-full blur-xl scale-110" />
                   <img 
                     src={founderImage} 
                     alt="أ. معين الناصر" 
-                    className="w-64 h-64 md:w-72 md:h-72 rounded-full object-cover shadow-2xl border-4 border-accent-gold relative z-10"
+                    className="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover shadow-xl border-3 border-accent-gold relative z-10"
                   />
-                  <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-accent-gold rounded-full flex items-center justify-center shadow-xl z-20">
-                    <Award className="w-12 h-12 text-navy" />
+                  <div className="absolute -bottom-2 -right-2 w-14 h-14 bg-accent-gold rounded-full flex items-center justify-center shadow-lg z-20">
+                    <Award className="w-7 h-7 text-navy" />
                   </div>
                 </div>
               </motion.div>
