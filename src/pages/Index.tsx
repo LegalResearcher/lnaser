@@ -223,7 +223,9 @@ const Index = () => {
               transition={{ delay: 0.3 }}
               className="flex items-center gap-3"
             >
-              <img src={logo} alt="مكتب الناصر للمحاماة" className="w-12 h-12 object-contain" />
+              <div className="w-12 h-12 bg-white/10 rounded-lg p-1.5 backdrop-blur-sm">
+                <img src={logo} alt="مكتب الناصر للمحاماة" className="w-full h-full object-contain" style={{ filter: 'brightness(0) invert(1)' }} />
+              </div>
               <h1 className="text-white font-bold text-xl">مكتب الناصر للمحاماة</h1>
             </motion.div>
             <motion.div
@@ -346,13 +348,15 @@ const Index = () => {
                   {/* Outer glow effect */}
                   <div className="absolute -inset-4 bg-gradient-to-br from-accent-gold/30 via-rich-blue/20 to-accent-gold/30 rounded-2xl blur-2xl opacity-60 group-hover:opacity-80 transition-all duration-500" />
                   
-                  {/* Image container with rounded corners */}
-                  <div className="relative bg-gradient-to-br from-accent-gold via-accent-gold/80 to-rich-blue p-1 rounded-2xl shadow-2xl">
-                    <img 
-                      src={founderImage} 
-                      alt="أ. معين الناصر" 
-                      className="w-44 h-44 md:w-52 md:h-52 rounded-xl object-cover relative z-10"
-                    />
+                  {/* Image container with rounded square corners */}
+                  <div className="relative bg-gradient-to-br from-accent-gold via-accent-gold-light to-rich-blue p-1.5 rounded-2xl shadow-2xl">
+                    <div className="bg-background rounded-xl overflow-hidden">
+                      <img 
+                        src={founderImage} 
+                        alt="أ. معين الناصر" 
+                        className="w-48 h-48 md:w-56 md:h-56 object-cover object-top"
+                      />
+                    </div>
                   </div>
                   
                   {/* Award badge */}
@@ -364,21 +368,21 @@ const Index = () => {
 
               {/* Content Column */}
               <motion.div 
-                className="md:col-span-3 text-center md:text-right space-y-6"
+                className="md:col-span-3 text-center md:text-right space-y-8"
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                <div className="inline-block bg-accent-gold/10 text-rich-blue font-bold text-sm px-5 py-2.5 rounded-full border border-accent-gold/20">
+                <div className="inline-block bg-accent-gold/10 text-rich-blue font-bold text-sm px-6 py-3 rounded-full border border-accent-gold/30">
                   المؤسس والمدير التنفيذي
                 </div>
                 
-                <h2 className="text-4xl md:text-5xl font-black text-primary">
+                <h2 className="text-4xl md:text-5xl font-black text-primary mt-6">
                   أ.معين الناصر
                 </h2>
                 
-                <p className="text-lg md:text-xl text-muted-foreground leading-loose md:leading-loose text-center md:text-right">
+                <p className="text-lg md:text-xl text-muted-foreground leading-loose md:leading-loose text-center md:text-justify mt-6">
                   مؤسس ومدير تنفيذي. نُقدم خدمات استشارية، ونولي اهتماماً استراتيجياً بمجال التحكيم وفض المنازعات. نلتزم بتقديم حلول قانونية مدروسة، تهدف إلى حماية مصالح العملاء وتعزيز موقفهم النظامي بأعلى معايير المهنية.
                 </p>
                 
@@ -399,7 +403,7 @@ const Index = () => {
       </section>
 
       {/* Value Proposition Section */}
-      <section className="py-24 bg-gradient-accent">
+      <section className="py-32 bg-gradient-accent relative">
         <div className="container mx-auto px-4">
           <motion.div {...fadeInUp} className="max-w-4xl mx-auto text-center">
             <Target className="w-20 h-20 text-accent-gold mx-auto mb-6" />
@@ -413,31 +417,31 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Vision & Mission Section */}
-      <section className="py-24 bg-muted">
+      {/* Vision & Mission Section - Overlapping Cards */}
+      <section className="py-24 bg-muted relative">
         <div className="container mx-auto px-4">
           <motion.div
             variants={staggerContainer}
             initial="initial"
             whileInView="whileInView"
             viewport={{ once: true }}
-            className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto"
+            className="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto -mt-20"
           >
             <motion.div variants={fadeInUp}>
-              <Card className="p-8 md:p-12 h-full shadow-card hover:shadow-card-hover transition-elegant bg-white border-none">
-                <Eye className="w-16 h-16 text-rich-blue mb-6" />
-                <h3 className="text-3xl font-black text-primary mb-6">رؤيتنا</h3>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+              <Card className="p-10 md:p-14 h-full shadow-elegant hover:shadow-card-hover transition-elegant bg-white border-none">
+                <Eye className="w-16 h-16 text-accent-gold mb-8" />
+                <h3 className="text-3xl font-black text-primary mb-8">رؤيتنا</h3>
+                <p className="text-lg text-muted-foreground leading-loose">
                   الريادة في صياغة المشهد القانوني في اليمن، وتقديم نموذج مؤسسي يحتذى به يجمع بين العراقة النظامية وأحدث الممارسات المهنية العالمية.
                 </p>
               </Card>
             </motion.div>
 
             <motion.div variants={fadeInUp}>
-              <Card className="p-8 md:p-12 h-full shadow-card hover:shadow-card-hover transition-elegant bg-white border-none">
-                <Target className="w-16 h-16 text-rich-blue mb-6" />
-                <h3 className="text-3xl font-black text-primary mb-6">رسالتنا</h3>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+              <Card className="p-10 md:p-14 h-full shadow-elegant hover:shadow-card-hover transition-elegant bg-white border-none">
+                <Target className="w-16 h-16 text-accent-gold mb-8" />
+                <h3 className="text-3xl font-black text-primary mb-8">رسالتنا</h3>
+                <p className="text-lg text-muted-foreground leading-loose">
                   تقديم حلول قانونية ذكية ومبتكرة، ترتكز على الكفاءة المعرفية والعمل الجماعي، لبناء شراكات استراتيجية مستدامة مع عملائنا تفوق مفهوم العلاقة التقليدية.
                 </p>
               </Card>
@@ -447,13 +451,13 @@ const Index = () => {
       </section>
 
       {/* Values Section */}
-      <section className="py-24 bg-background">
+      <section className="py-28 bg-background">
         <div className="container mx-auto px-4">
-          <motion.div {...fadeInUp} className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black text-primary mb-4">
+          <motion.div {...fadeInUp} className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-black text-primary mb-6">
               قيمنا الراسخة
             </h2>
-            <div className="w-24 h-1 bg-gradient-gold mx-auto mb-6" />
+            <div className="w-24 h-1 bg-gradient-gold mx-auto mb-8" />
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               المبادئ التي نلتزم بها في كل ما نقوم به
             </p>
@@ -464,13 +468,15 @@ const Index = () => {
             initial="initial"
             whileInView="whileInView"
             viewport={{ once: true }}
-            className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 max-w-6xl mx-auto"
+            className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 max-w-7xl mx-auto"
           >
             {values.map((value, index) => (
               <motion.div key={index} variants={fadeInUp}>
-                <Card className="p-6 text-center h-full shadow-card hover:shadow-card-hover transition-elegant hover:-translate-y-2 bg-white border-none">
-                  <value.icon className="w-12 h-12 text-rich-blue mx-auto mb-4" />
-                  <h3 className="text-xl font-bold text-primary mb-3">{value.title}</h3>
+                <Card className="p-8 text-center h-full shadow-card hover:shadow-card-hover transition-elegant hover:-translate-y-2 bg-white border-none">
+                  <div className="w-16 h-16 bg-accent-gold/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <value.icon className="w-8 h-8 text-accent-gold" />
+                  </div>
+                  <h3 className="text-xl font-bold text-primary mb-4">{value.title}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">{value.description}</p>
                 </Card>
               </motion.div>
@@ -517,14 +523,14 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="py-24 bg-muted">
+      {/* Services Section - Card Grid with Icons */}
+      <section className="py-28 bg-muted">
         <div className="container mx-auto px-4">
-          <motion.div {...fadeInUp} className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black text-primary mb-4">
+          <motion.div {...fadeInUp} className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-black text-primary mb-6">
               نطاق خدماتنا
             </h2>
-            <div className="w-24 h-1 bg-gradient-gold mx-auto mb-6" />
+            <div className="w-24 h-1 bg-gradient-gold mx-auto mb-8" />
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               نقدم خدمات احترافية تغطي أهم المجالات القانونية
             </p>
@@ -535,18 +541,20 @@ const Index = () => {
             initial="initial"
             whileInView="whileInView"
             viewport={{ once: true }}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto"
           >
             {services.map((service, index) => (
               <motion.div key={index} variants={fadeInUp}>
-                <Card className="p-8 h-full shadow-card hover:shadow-card-hover transition-elegant hover:-translate-y-2 bg-white border-none">
-                  <service.icon className="w-16 h-16 text-rich-blue mb-6" />
-                  <h3 className="text-xl font-bold text-primary mb-6">{service.title}</h3>
-                  <ul className="space-y-3">
+                <Card className="p-10 h-full shadow-card hover:shadow-card-hover transition-elegant hover:-translate-y-2 bg-white border-none group">
+                  <div className="w-20 h-20 bg-gradient-to-br from-accent-gold/20 to-accent-gold/5 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-smooth">
+                    <service.icon className="w-10 h-10 text-accent-gold" />
+                  </div>
+                  <h3 className="text-2xl font-black text-primary mb-6">{service.title}</h3>
+                  <ul className="space-y-4">
                     {service.items.map((item, idx) => (
-                      <li key={idx} className="flex items-start gap-2 text-muted-foreground">
-                        <CheckCircle className="w-5 h-5 text-rich-blue flex-shrink-0 mt-0.5" />
-                        <span>{item}</span>
+                      <li key={idx} className="flex items-start gap-3 text-muted-foreground">
+                        <CheckCircle className="w-5 h-5 text-accent-gold flex-shrink-0 mt-0.5" />
+                        <span className="leading-relaxed">{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -760,7 +768,9 @@ const Index = () => {
       <footer className="bg-navy py-16">
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center justify-center text-center">
-            <img src={logo} alt="مكتب الناصر للمحاماة" className="w-16 h-16 object-contain mb-4" />
+            <div className="w-16 h-16 mb-4">
+              <img src={logo} alt="مكتب الناصر للمحاماة" className="w-full h-full object-contain" style={{ filter: 'brightness(0) invert(1)' }} />
+            </div>
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">مكتب الناصر</h3>
             <p className="text-white/80 text-lg mb-2">للمحاماة والاستشارات القانونية</p>
             <p className="text-accent-gold text-lg mb-2">أ. معين الناصر</p>
