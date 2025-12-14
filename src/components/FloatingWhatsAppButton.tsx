@@ -12,7 +12,7 @@ const FloatingWhatsAppButton = () => {
       initial={{ scale: 0, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       transition={{ duration: 0.5, delay: 1 }}
-      className="fixed bottom-6 left-6 z-50"
+      className="fixed bottom-24 left-6 z-50"
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
     >
@@ -37,14 +37,14 @@ const FloatingWhatsAppButton = () => {
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center w-16 h-16 bg-[#25D366] rounded-full shadow-elegant hover:shadow-card-hover transition-smooth"
+          className="flex items-center justify-center w-14 h-14 bg-[#25D366] rounded-full shadow-elegant hover:shadow-card-hover transition-smooth"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           aria-label="تواصل عبر واتساب"
         >
           <svg
             viewBox="0 0 32 32"
-            className="w-9 h-9"
+            className="w-7 h-7"
             fill="white"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -55,7 +55,7 @@ const FloatingWhatsAppButton = () => {
 
       {/* Pulse animation ring */}
       <motion.div
-        className="absolute top-0 left-0 w-16 h-16 bg-[#25D366] rounded-full -z-10"
+        className="absolute top-0 left-0 w-14 h-14 bg-[#25D366] rounded-full -z-10"
         animate={{
           scale: [1, 1.3, 1],
           opacity: [0.5, 0, 0.5],
