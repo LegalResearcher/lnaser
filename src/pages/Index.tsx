@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { Scale, Shield, FileText, Users, Award, Phone, Mail, MapPin, Clock, Target, Eye, Heart, CheckCircle, Briefcase, TrendingUp, Star, MessageSquare, ArrowRight, HelpCircle, Facebook, Twitter, Send, Lock, Sparkles } from "lucide-react";
+import { Scale, Shield, FileText, Users, Award, Phone, Mail, MapPin, Clock, Target, Eye, Heart, CheckCircle, Briefcase, TrendingUp, Star, MessageSquare, ArrowRight, HelpCircle, Facebook, Twitter, Send, Lock, Sparkles, Book } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { PWAInstallPrompt } from "@/components/PWAInstallPrompt";
@@ -234,6 +235,12 @@ const Index = () => {
               transition={{ delay: 0.5 }}
               className="flex gap-3"
             >
+              <Link to="/library">
+                <Button variant="outline" className="bg-transparent border-white/50 text-white hover:bg-white/10 transition-smooth gap-2">
+                  <Book className="w-4 h-4" />
+                  المكتبة القانونية
+                </Button>
+              </Link>
               <Button variant="outline" className="bg-transparent border-accent-gold text-accent-gold hover:bg-accent-gold hover:text-navy transition-smooth">
                 تواصل معنا
               </Button>
