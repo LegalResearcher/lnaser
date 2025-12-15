@@ -18,49 +18,70 @@ export type Database = {
         Row: {
           category: Database["public"]["Enums"]["library_category"]
           content: string | null
+          cover_image_url: string | null
           created_at: string
           description: string | null
           document_type: Database["public"]["Enums"]["document_type"]
+          external_url: string | null
           file_name: string | null
           file_size: number | null
           file_url: string | null
           id: string
+          image_urls: string[] | null
           is_downloadable: boolean | null
+          media_type: string | null
+          og_description: string | null
+          og_title: string | null
           tags: string[] | null
           title: string
           updated_at: string
+          video_source: string | null
           view_count: number | null
         }
         Insert: {
           category: Database["public"]["Enums"]["library_category"]
           content?: string | null
+          cover_image_url?: string | null
           created_at?: string
           description?: string | null
           document_type?: Database["public"]["Enums"]["document_type"]
+          external_url?: string | null
           file_name?: string | null
           file_size?: number | null
           file_url?: string | null
           id?: string
+          image_urls?: string[] | null
           is_downloadable?: boolean | null
+          media_type?: string | null
+          og_description?: string | null
+          og_title?: string | null
           tags?: string[] | null
           title: string
           updated_at?: string
+          video_source?: string | null
           view_count?: number | null
         }
         Update: {
           category?: Database["public"]["Enums"]["library_category"]
           content?: string | null
+          cover_image_url?: string | null
           created_at?: string
           description?: string | null
           document_type?: Database["public"]["Enums"]["document_type"]
+          external_url?: string | null
           file_name?: string | null
           file_size?: number | null
           file_url?: string | null
           id?: string
+          image_urls?: string[] | null
           is_downloadable?: boolean | null
+          media_type?: string | null
+          og_description?: string | null
+          og_title?: string | null
           tags?: string[] | null
           title?: string
           updated_at?: string
+          video_source?: string | null
           view_count?: number | null
         }
         Relationships: []
