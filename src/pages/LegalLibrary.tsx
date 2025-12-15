@@ -1,9 +1,8 @@
 import { motion } from "framer-motion";
-import { Book, Scale, FileText, Globe, Calculator, Files, Download, Eye, Search, ArrowLeft } from "lucide-react";
+import { Book, Scale, FileText, Globe, Calculator, Files, Search, ArrowLeft, FileVideo, Image } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
@@ -11,10 +10,35 @@ import { supabase } from "@/integrations/supabase/client";
 import FloatingWhatsAppButton from "@/components/FloatingWhatsAppButton";
 import logo from "@/assets/logo.png";
 import InheritanceCalculator from "@/components/library/InheritanceCalculator";
-import DocumentViewer from "@/components/library/DocumentViewer";
+import MultimediaViewer from "@/components/library/MultimediaViewer";
 import DocumentCard from "@/components/library/DocumentCard";
+import SEOHead from "@/components/library/SEOHead";
 
 type LibraryCategory = 'yemeni_laws' | 'legal_rulings' | 'research' | 'arab_laws' | 'legal_templates';
+
+interface DocumentData {
+  id: string;
+  title: string;
+  description: string | null;
+  category: string;
+  document_type: string;
+  content: string | null;
+  file_url: string | null;
+  file_name: string | null;
+  file_size: number | null;
+  is_downloadable: boolean | null;
+  tags: string[] | null;
+  view_count: number | null;
+  created_at: string;
+  updated_at: string;
+  media_type?: string | null;
+  cover_image_url?: string | null;
+  external_url?: string | null;
+  image_urls?: string[] | null;
+  video_source?: string | null;
+  og_title?: string | null;
+  og_description?: string | null;
+}
 
 const categories = [
   { id: 'yemeni_laws' as LibraryCategory, title: 'التشريعات والقوانين اليمنية', icon: Scale, description: 'الدستور، القوانين، اللوائح، الاتفاقيات' },
@@ -27,7 +51,7 @@ const categories = [
 const LegalLibrary = () => {
   const [activeCategory, setActiveCategory] = useState<LibraryCategory | 'calculator'>('yemeni_laws');
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedDocument, setSelectedDocument] = useState<string | null>(null);
+  const [selectedDocument, setSelectedDocument] = useState<DocumentData | null>(null);
 
   const { data: documents, isLoading } = useQuery({
     queryKey: ['library-documents', activeCategory, searchQuery],
@@ -46,7 +70,7 @@ const LegalLibrary = () => {
       
       const { data, error } = await query;
       if (error) throw error;
-      return data;
+      return data as DocumentData[];
     },
     enabled: activeCategory !== 'calculator'
   });
@@ -57,8 +81,19 @@ const LegalLibrary = () => {
     transition: { duration: 0.6 }
   };
 
+  const getMediaIcon = (doc: DocumentData) => {
+    if (doc.media_type === 'video') return FileVideo;
+    if (doc.media_type === 'image') return Image;
+    return FileText;
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="المكتبة القانونية"
+        description="مرجعك الشامل للتشريعات والقوانين والأبحاث القانونية - مكتب الناصر للمحاماة"
+        url="/library"
+      />
       <FloatingWhatsAppButton />
       
       {/* Navigation */}
@@ -204,7 +239,7 @@ const LegalLibrary = () => {
                         <DocumentCard 
                           key={doc.id} 
                           document={doc} 
-                          onView={() => setSelectedDocument(doc.file_url)}
+                          onView={() => setSelectedDocument(doc)}
                         />
                       ))}
                     </div>
@@ -224,10 +259,10 @@ const LegalLibrary = () => {
         </div>
       </section>
 
-      {/* PDF Viewer Modal */}
+      {/* Multimedia Viewer Modal */}
       {selectedDocument && (
-        <DocumentViewer 
-          url={selectedDocument} 
+        <MultimediaViewer 
+          document={selectedDocument} 
           onClose={() => setSelectedDocument(null)} 
         />
       )}
