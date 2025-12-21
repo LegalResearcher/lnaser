@@ -1,73 +1,50 @@
-# Welcome to your lawyer-alnasser. project
+﻿# مكتب الناصر للمحاماة والاستشارات القانونية | Al-Nasser Law Firm
 
-## Project info
+الموقع الرسمي لمكتب الناصر (أ. معين الناصر)، المنصة الرقمية لتقديم الخدمات القانونية المتكاملة. يهدف الموقع لتسهيل التواصل مع العملاء واستعراض الخدمات في القضايا المدنية، الجنائية، التجارية، والأحوال الشخصية.
 
-**URL**: https://lawyer-alnasser.vercel.app
+**رابط الموقع:** [https://lawyer-alnasser.vercel.app](https://lawyer-alnasser.vercel.app)
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## ⚖️ عن المكتب
 
-**Use lawyer-alnasser**
+مكتب الناصر هو وجهتكم القانونية الموثوقة، حيث نجمع بين الخبرة العلمية والممارسة العملية لضمان أفضل النتائج للموكلين.
+**أبرز مجالات الاختصاص:**
+* القضايا المدنية والتجارية.
+* الترافع في القضايا الجنائية.
+* قضايا الأحوال الشخصية والأسرة.
+* تقديم الاستشارات القانونية وصياغة العقود.
 
-Simply visit the [lawyer-alnasser Project](https://lawyer-alnasser.vercel.app) and start prompting.
+---
 
-Changes made via lawyer-alnasser will be committed automatically to this repo.
+## 🛠 التقنيات المستخدمة (Technologies)
 
-**Use your preferred IDE**
+تم بناء الموقع باستخدام تقنيات حديثة تضمن السرعة، الأمان، وسهولة التصفح:
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in lawyer-alnasser.
+- **Vite**: لضمان سرعة تحميل عالية وأداء ممتاز.
+- **TypeScript**: لكتابة كود برمجي دقيق وخالٍ من الأخطاء التقنية.
+- **React**: لبناء واجهات مستخدم تفاعلية وعصرية.
+- **shadcn-ui**: لتصميم عناصر واجهة أنيقة واحترافية.
+- **Tailwind CSS**: لتنسيق الصفحات بشكل متجاوب مع جميع الأجهزة.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## 💻 دليل المطورين (Setup Guide)
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+لتشغيل المشروع محلياً أو المساهمة في تطويره، اتبع الخطوات التالية:
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+**المتطلبات:** تأكد من تثبيت [Node.js](https://nodejs.org/) و [Git](https://git-scm.com/) على جهازك.
 
-# Step 3: Install the necessary dependencies.
+```bash
+# 1. استنساخ المستودع (Clone)
+git clone [https://github.com/LegalResearcher/lnaser.git](https://github.com/LegalResearcher/lnaser.git)
+
+# 2. الدخول إلى مجلد المشروع
+cd lnaser
+
+# 3. تثبيت الحزم والاعتماديات
 npm i
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# 4. تشغيل السيرفر المحلي (للمعاينة)
 npm run dev
-```
 
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [lawyer-alnasser](https://lawyer-alnasser.vercel.app) and click on Share -> Publish.
-
-## Can I connect a custom domain to my lawyer-alnasser project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://lawyer-alnasser.vercel.app)
